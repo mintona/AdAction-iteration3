@@ -16,9 +16,10 @@ public class FizzBuzzTest {
 
     @Test
     public void whenGivenNumbers1through20_theOutputWithLuckyIsCorrect() {
-        String expected = "1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz";
-
+        String expected = "1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz\n";
+        String expected2 = "fizz: 4\nbuzz: 3\nfizzbuzz: 1\nlucky: 2\ninteger: 10";
         assertThat(fizzBuzz.run(1, 20), containsString(expected));
+        assertThat(fizzBuzz.run(1, 20), containsString(expected2));
     }
 
     @Test
