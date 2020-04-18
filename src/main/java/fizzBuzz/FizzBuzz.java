@@ -39,24 +39,8 @@ public class FizzBuzz {
     }
 
     public static Map<String, Integer> generateReport(int start, int end) {
-        int[] numbers = IntStream.rangeClosed(start, end).toArray();
 
-        ArrayList<String> results = new ArrayList<String>();
-
-        for (int number : numbers) {
-            if (Integer.toString(number).contains("3")) {
-                results.add("lucky");
-            }
-            else if (number % 15 == 0) {
-                results.add("fizzbuzz");
-            } else if (number % 3 == 0) {
-                results.add("fizz");
-            } else if (number % 5 == 0) {
-                results.add("buzz");
-            } else {
-                results.add(Integer.toString(number));
-            }
-        }
+        ArrayList<String> results = getResults(start, end);
 
         Map<String, Integer> report = new HashMap<String, Integer>();
         for (String result : results) {
