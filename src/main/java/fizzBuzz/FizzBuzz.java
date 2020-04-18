@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.stream.IntStream;
 
 public class FizzBuzz {
+    public static void main(String[] args) {
+        System.out.println(run(1,20));
+    }
+
     public static String run(int start, int end) {
         int[] numbers = IntStream.rangeClosed(start, end).toArray();
 
