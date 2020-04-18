@@ -11,6 +11,11 @@ public class FizzBuzz {
     }
 
     public static String run(int start, int end) {
+        ArrayList<String> results = getResults(1,20);
+        return String.join(" ", results);
+    }
+
+    public static ArrayList<String> getResults(int start, int end) {
         int[] numbers = IntStream.rangeClosed(start, end).toArray();
 
         ArrayList<String> results = new ArrayList<String>();
@@ -30,7 +35,7 @@ public class FizzBuzz {
             }
         }
 
-        return String.join(" ", results);
+        return results;
     }
 
     public static Map<String, Integer> generateReport(int start, int end) {
