@@ -7,12 +7,23 @@ import java.util.stream.IntStream;
 
 public class FizzBuzz {
     public static void main(String[] args) {
+
         System.out.println(run(1,20));
     }
 
     public static String run(int start, int end) {
-        ArrayList<String> results = getResults(1,20);
-        return String.join(" ", results);
+        ArrayList<String> results = getResults(start,end);
+
+        String results_string = String.join(" ", results);
+
+        Map<String, Integer> report = generateReport(start, end);
+        String fizz = Integer.toString(report.get("fizz"));
+        String buzz = Integer.toString(report.get("buzz"));
+        String fizzbuzz = Integer.toString(report.get("fizzbuzz"));
+        String lucky = Integer.toString(report.get("lucky"));
+        String integer = Integer.toString(report.get("integer"));
+
+        return results_string + "\n" + "fizz: " + fizz + "\nbuzz: " + buzz + "\nfizzbuzz: " + fizzbuzz + "\nlucky: " + lucky + "\ninteger: " + integer;
     }
 
     public static ArrayList<String> getResults(int start, int end) {
