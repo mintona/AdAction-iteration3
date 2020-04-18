@@ -4,3 +4,7 @@
 /.idea
 /AdAction
 /target
+iteration1.iml
+iteration2.iml
+src/main/main.iml
+src/test/test.iml
