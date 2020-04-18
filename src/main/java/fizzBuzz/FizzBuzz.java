@@ -10,7 +10,10 @@ public class FizzBuzz {
         ArrayList<String> results = new ArrayList<String>();
 
         for (int number : numbers) {
-            if (number % 15 == 0) {
+            if (Integer.toString(number).contains("3")) {
+                results.add("lucky");
+            }
+            else if (number % 15 == 0) {
                 results.add("fizzbuzz");
             } else if (number % 3 == 0) {
                 results.add("fizz");
