@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import jdk.jfr.StackTrace;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,6 +19,17 @@ public class FizzBuzzTest {
         String expected = "1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz";
 
         assertThat(fizzBuzz.run(1, 20), containsString(expected));
+    }
+
+    @Test
+    public void whenGivenNumbers_generateResultsReturnsArrayWithResults() {
+        ArrayList<String> expected = new ArrayList<String> ();
+        expected.add("1");
+        expected.add("2");
+        expected.add("lucky");
+        expected.add("4");
+
+        assertEquals(expected, fizzBuzz.getResults(1,4));
     }
 
     @Test
