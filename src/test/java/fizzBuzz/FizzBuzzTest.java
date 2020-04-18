@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import jdk.jfr.StackTrace;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.containsString;
